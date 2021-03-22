@@ -71,7 +71,7 @@ class Config(object):
     TOP_DOWN_PYRAMID_SIZE = 256
 
     # Number of classification classes (including background)
-    NUM_CLASSES = 3  # Override in sub-classes
+    NUM_CLASSES = 2  # Override in sub-classes
 
     # Length of square anchor side in pixels
     RPN_ANCHOR_SCALES = (32, 64, 128, 256, 512)
@@ -87,6 +87,8 @@ class Config(object):
 
     # Non-max suppression threshold to filter RPN proposals.
     # You can increase this during training to generate more propsals.
+
+    #gwj可以改变阈值,指定的稍微小点可以得到的多点
     RPN_NMS_THRESHOLD = 0.7
 
     # How many anchors per image to use for RPN training
